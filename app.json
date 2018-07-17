@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/profile/profile",
+    "pages/trip/trip",
+    "pages/message/message",
+    "pages/sight/sight"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#89c3d8",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#89c3d8",
+    "color": "#ffffff",
+    "selectedColor": "#fff100",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_c.png"
+      },
+      {
+        "pagePath": "pages/trip/trip",
+        "text": "发布",
+        "iconPath": "images/post.png",
+        "selectedIconPath": "images/post_c.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "发现",
+        "iconPath": "images/discover.png",
+        "selectedIconPath": "images/discover_c.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile_c.png"
+      }
+    ]
+  }
+}

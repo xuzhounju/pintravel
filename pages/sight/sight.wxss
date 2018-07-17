@@ -1,0 +1,11 @@
+/* pages/sight/sight.wxss */
+.top-image{
+  display: flex;
+  width:750rpx;
+  height:350rpx;
+  position: relative;
+}
+
+.sightinfo{
+  margin: 20rpx;
+}

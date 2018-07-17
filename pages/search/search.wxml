@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="section">
+    <input  bindinput="bindKeyInput" placeholder="去哪儿？"/>
+    <button bindtap="bindButtonTap">搜索</button>
+
+</view>
+
+<view wx:for="{{potentialPlaces}}" class="potentialPlaces" bindtap="chooseViewTap" wx:key="{{index}}" data-id="{{index}}">
+  <view class="Grid">
+    <view class="Gridcell info">
+      <image class="smallPhoto"src="{{item.thumbnail_url}}"></image>
+      <view class='cityname'>{{item.name}}</view>
+    </view>
+    <view class="Gridcell details">
+      {{item.name_suffix}}
+    </view>
+  </view>
+</view>

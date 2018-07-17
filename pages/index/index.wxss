@@ -1,0 +1,58 @@
+/**index.wxss**/
+
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.search{
+  top:200rpx;
+  left:250rpx;
+  width: 250rpx;
+  height: 50rpx;
+  background: white;
+  border-radius: 20rpx;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  line-height: 50rpx;
+  font-size:30rpx;
+  padding-left:10rpx;
+  padding-right:10rpx;
+  color:#2198cc;
+}
+
+.top-image{
+  display: flex;
+  width:750rpx;
+  height:450rpx;
+  position: relative;
+}
+
+.notVoid{
+  margin-left: 10rpx;
+}
+movable-area {
+  height: 300rpx;
+  width: 750rpx;
+  margin-top: 30rpx;
+ 
+}
+
+
+movable-view {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  height: 300rpx;
+  width: 1630rpx;
+  /* background: #1AAD19; */
+  /* color: #fff; */
+  font-size: 30rpx;
+}
+
+.sightseeing{
+  margin: 10rpx;
+  height:300rpx
+}
+

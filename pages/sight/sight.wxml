@@ -1,0 +1,15 @@
+<!--pages/sight/sight.wxml-->
+<image class="top-image" src="{{image}}"mode="aspectFill"></image>
+<view class="sightinfo">
+  <view class='sightname'>{{sight.name}}</view>
+  <view class='sightparent'>{{sight.name_suffix}}</view>
+  <view class='sightintro' wx:if="{{sight.perex}}"> {{sight.perex}}</view>
+  <map
+      id="myMap"
+      style="width: 100%; height: 100px;"
+      latitude="{{sight.location.lat}}"
+      longitude="{{sight.location.lng}}"
+      show-location
+    ></map>
+</view>
+

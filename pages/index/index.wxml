@@ -1,0 +1,80 @@
+<!--index.wxml-->
+
+  <image class="top-image" src="{{image}}" mode="aspectFill"></image>
+  <button class="search" bindtap="GoSearch">{{city}}</button>
+  <view class="void" wx:if="{{city=='去哪儿'}}">
+ 
+  </view>
+  <view class="notVoid" wx:else>
+    <view class='title'>著名景点</view>
+    <movable-area>
+      <movable-view direction="horizontal" out-of-bounds="{{true}}">
+        
+        <view class="sightseeing" wx:for="{{sightseeings}}" bindtap="chooseSightTap" wx:key="{{index}}" data-id="{{index}}">
+          <block class="sightBox" wx:if="{{item.thumbnail_url}}">
+            <image class="sightImage"  style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill"src="{{item.thumbnail_url}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+          <block class="sightBox" wx:else>
+            <image class="sightImage" style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill" src="{{'../../images/cover.jpg'}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+        </view>
+        
+      </movable-view>
+    </movable-area>
+
+
+
+    <view class='title'>饕餮盛宴</view>
+    <movable-area>
+      <movable-view direction="horizontal" out-of-bounds="{{true}}">
+        
+        <view class="sightseeing" wx:for="{{foods}}" bindtap="chooseFoodTap" wx:key="{{index}}" data-id="{{index}}">
+          <block class="sightBox" wx:if="{{item.thumbnail_url}}">
+            <image class="sightImage"  style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill"src="{{item.thumbnail_url}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+          <block class="sightBox" wx:else>
+            <image class="sightImage" style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill" src="{{'../../images/cover.jpg'}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+        </view>
+        
+      </movable-view>
+    </movable-area>
+
+
+
+    <view class='title'>购物街区</view>
+    <movable-area>
+      <movable-view direction="horizontal" out-of-bounds="{{true}}">
+        
+        <view class="sightseeing" wx:for="{{shoppings}}" bindtap="chooseShopTap" wx:key="{{index}}" data-id="{{index}}">
+          <block class="sightBox" wx:if="{{item.thumbnail_url}}">
+            <image class="sightImage"  style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill"src="{{item.thumbnail_url}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+          <block class="sightBox" wx:else>
+            <image class="sightImage" style="width: 300rpx; height: 185rpx; background-color: #eeeeee;" mode="aspectFill" src="{{'../../images/cover.jpg'}}"></image>
+            <view class="sightname">
+              {{item.name}}
+            </view>
+          </block>
+        </view>
+        
+      </movable-view>
+    </movable-area>
+  </view>
+
+
