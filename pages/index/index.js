@@ -103,6 +103,26 @@ Page({
     })
   },
 
+  chooseFoodTap: function(e) {
+    console.log(e)
+    var index = e.currentTarget.dataset.id
+    app.globalData.sight = app.globalData.foods[index]
+    wx.navigateTo({
+      url: '../sight/sight',
+    })
+  },
+
+  chooseShopTap: function (e) {
+    console.log(e)
+    var index = e.currentTarget.dataset.id
+    app.globalData.sight = app.globalData.shoppings[index]
+    wx.navigateTo({
+      url: '../sight/sight',
+    })
+  },
+
+
+
   
   getUserInfo: function(e) {
     console.log(e)
