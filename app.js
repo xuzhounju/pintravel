@@ -41,6 +41,7 @@ App({
     sightseeings:[],
     foods:[],
     shoppings:[],
-    sight:''
+    sight:'',
+    newplace:false
   }
 })

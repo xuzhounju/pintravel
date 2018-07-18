@@ -5,7 +5,8 @@
     "pages/profile/profile",
     "pages/trip/trip",
     "pages/message/message",
-    "pages/sight/sight"
+    "pages/sight/sight",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",

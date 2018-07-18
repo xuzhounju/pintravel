@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cityname:'',
     potentialPlaces:[],
 
   },
@@ -18,13 +19,16 @@ Page({
   },
 
   bindKeyInput: function (e) {
-    app.globalData.cityname = e.detail.value
+    this.setData({
+      cityname:e.detail.value
+    })
+    
   },
 
   bindButtonTap: function () {
     var that = this
     wx.request({
-      url: 'http://localhost:8080' + '/place?city=' + app.globalData.cityname,
+      url: 'http://localhost:8080' + '/place?city=' + that.data.cityname,
       success: function (res) {
         console.log(res)
         var places=[]
@@ -77,6 +81,7 @@ Page({
           success: function (res) {
             console.log(res)
             app.globalData.sightseeings = res.data.places
+            app.globalData.newplace=true
             wx.navigateBack({
 
             })

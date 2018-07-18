@@ -48,19 +48,18 @@ Page({
     
   },
 
-
-  onShow:function(){
-    var that=this
-    console.log('show')
-    var s =[]
-    if (app.globalData.sightseeings.length>0){
+  showCity:function(){
+    app.globalData.newplace=false
+    var that = this
+    var s = []
+    if (app.globalData.sightseeings.length > 0) {
       s = app.globalData.sightseeings.slice(0, 5)
-      console.log('s:',s)
+      console.log('s:', s)
       wx.request({
-        url: 'http://localhost:8080' + '/city?id='+app.globalData.city.id+'&type=eating',
-        success: function(res){
-          console.log('top food:',res.data)
-          app.globalData.foods=res.data.places
+        url: 'http://localhost:8080' + '/city?id=' + app.globalData.city.id + '&type=eating',
+        success: function (res) {
+          console.log('top food:', res.data)
+          app.globalData.foods = res.data.places
           var f = app.globalData.foods.slice(0, 5)
           that.setData({
             foods: f
@@ -68,23 +67,37 @@ Page({
         }
       })
       wx.request({
-        url: 'http://localhost:8080' + '/city?id=' + app.globalData.city.id+'&type=shopping',
+        url: 'http://localhost:8080' + '/city?id=' + app.globalData.city.id + '&type=shopping',
         success: function (res) {
           console.log('top shopping:', res.data)
           app.globalData.shoppings = res.data.places
-          var shop = app.globalData.shoppings.slice(0,5)
+          var shop = app.globalData.shoppings.slice(0, 5)
           that.setData({
             shoppings: shop
           })
         }
       })
     }
-    
+
     this.setData({
       city: app.globalData.cityname,
       image: app.globalData.cityUrl,
-      sightseeings:s
+      sightseeings:app.globalData.sightseeings
     })
+  },
+
+  onShow:function(){
+    console.log('show')
+    if(app.globalData.newplace){
+      console.log('newplace')
+      this.showCity()
+    }
+
+    this.setData({
+      city: app.globalData.cityname,
+      image: app.globalData.cityUrl,
+    })
+    
   },
 
   GoSearch:function(e){

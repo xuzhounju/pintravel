@@ -1,0 +1,10 @@
+<!--pages/map/map.wxml-->
+<map
+  id="myMap"
+  style="width: 100%; height: 300px;"
+  latitude="{{sight.location.lat}}"
+  longitude="{{sight.location.lng}}"
+  markers="{{markers}}"
+  
+  show-location
+  ></map>

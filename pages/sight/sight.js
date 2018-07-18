@@ -32,6 +32,13 @@ Page({
   
   },
 
+  tapminimap:function(e){
+    console.log('tap mini map:',e)
+    wx.navigateTo({
+      url: '../map/map',
+    })
+  }
+
 
  
 })

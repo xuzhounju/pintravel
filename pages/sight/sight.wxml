@@ -10,6 +10,7 @@
       latitude="{{sight.location.lat}}"
       longitude="{{sight.location.lng}}"
       show-location
+      bindtap="tapminimap"
     ></map>
 </view>
 
